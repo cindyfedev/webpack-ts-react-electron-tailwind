@@ -16,7 +16,7 @@ export const LoginPage = () => {
 
   useEffect(() => {
     const hasToken = localStorage.getItem("token");
-    if (hasToken) navigate("/main_window");
+    if (hasToken) navigate("/home");
   }, []);
 
   useEffect(() => {
@@ -25,7 +25,7 @@ export const LoginPage = () => {
         // Redirect to about page or display a success message
         console.log("Login successful");
         localStorage.setItem("token", "secret");
-        navigate("/main_window");
+        navigate("/home");
       } else {
         // Handle login failure
         alert("login failed");

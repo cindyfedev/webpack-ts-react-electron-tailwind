@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import FlowTest from "../components/flow-test";
+import CameraSelector from "../components/camera-selector";
 const { ipcRenderer } = window.require("electron"); // https://github.com/electron/electron/issues/7300
 
 export const Home = () => {
@@ -16,6 +18,12 @@ export const Home = () => {
 
   return (
     <div>
+      <div className=" mx-auto mt-4 border-2 border-blue-200 max-w-[80%] max-h-[400px] overflow-hidden relative">
+        <FlowTest />
+      </div>
+
+      <CameraSelector />
+
       <h1> Home Page</h1>
 
       <button
